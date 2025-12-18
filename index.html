@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Dr. Bostone Emmanuel Neema | Doctor</title>
+    <meta name="description" content="Dr. Bostone Emmanuel Neema - Doctor specializing in medical care at Apollo Speciality Hospital in Chennai India and Eldoret Dr's Plaza.">
+    <meta name="keywords" content="doctor, medical care, Apollo Speciality Hospital, Chennai India, Eldoret Dr's Plaza, Dr. Bostone Emmanuel Neema">
+    <meta name="author" content="Dr. Bostone Emmanuel Neema">
+    <meta property="og:title" content="Dr. Bostone Emmanuel Neema | Doctor">
+    <meta property="og:description" content="Doctor providing medical care at Apollo Speciality Hospital in Chennai India and Eldoret Dr's Plaza.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Custom CSS for surgical portfolio */
+        :root {
+            --primary: #0ea5e9;  /* Sky blue - medical trust color */
+            --secondary: #ef4444; /* Red - heart/surgery color */
+            --accent: #10b981;   /* Emerald - healing color */
+            --dark: #0f172a;     /* Dark blue background */
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Surgical themed background patterns */
+        .surgical-bg {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.03) 0%, rgba(239, 68, 68, 0.03) 100%);
+        }
+        
+        .cardiac-pattern {
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(14, 165, 233, 0.1) 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, rgba(239, 68, 68, 0.1) 2px, transparent 2px);
+            background-size: 50px 50px;
+        }
+        
+        /* Animations */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes surgical-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(14, 165, 233, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(14, 165, 233, 0.5); }
+        }
+        
+        .heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        .pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+        
+        .float-animation {
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        .surgical-glow {
+            animation: surgical-glow 2s ease-in-out infinite;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            border-radius: 5px;
+        }
+        
+        /* Surgical elements */
+        .surgical-border {
+            position: relative;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+        
+        .surgical-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--primary));
+            border-radius: inherit;
+            z-index: -1;
+        }
+        
+        /* Procedure visualization */
+        .procedure-step {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .procedure-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(14, 165, 233, 0.2);
+        }
+        
+        .procedure-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 4px 4px 0 0;
+        }
+        
+        /* Surgical tool icon animations */
+        .tool-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .tool-icon:hover {
+            transform: rotate(15deg) scale(1.2);
+        }
+        
+        /* Consultation form */
+        .consultation-form input:focus,
+        .consultation-form textarea:focus,
+        .consultation-form select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+        }
+        
+        /* Stats counter */
+        .stat-number {
+            font-feature-settings: "tnum";
+            font-variant-numeric: tabular-nums;
+        }
+        
+        /* Emergency contact */
+        .emergency-contact {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .emergency-contact::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(239, 68, 68, 0.1), transparent);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        /* Navigation */
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Surgical mask effect for images */
+        .surgical-mask {
+            -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
+            mask-image: radial-gradient(circle, black 70%, transparent 100%);
+        }
+        
+        /* Animated timeline for experience */
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 22px;
+            width: 2px;
+            height: calc(100% + 20px);
+            background: linear-gradient(to bottom, var(--primary), transparent);
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-red-500 rounded-full flex items-center justify-center text-white heartbeat">
+                    <i class="fas fa-heartbeat text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold">Dr. Bostone Emmanuel <span class="text-blue-600">Neema</span></h1>
+                    <p class="text-xs text-gray-600">Doctor</p>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link font-medium">Home</a>
+                <a href="#about" class="nav-link font-medium">About</a>
+                <a href="#expertise" class="nav-link font-medium">Expertise</a>
+                <a href="#procedures" class="nav-link font-medium">Procedures</a>
+                <a href="#case-studies" class="nav-link font-medium">Case Studies</a>
+                <a href="#contact" class="nav-link font-medium">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="px-6 py-2 bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full font-medium hover:opacity-90 transition-opacity">
+                    Book Consultation
+                </a>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg hidden">
+            <div class="flex flex-col items-center py-6 space-y-4">
+                <a href="#home" class="font-medium hover:text-blue-600 transition-colors py-2">Home</a>
+                <a href="#about" class="font-medium hover:text-blue-600 transition-colors py-2">About</a>
+                <a href="#expertise" class="font-medium hover:text-blue-600 transition-colors py-2">Expertise</a>
+                <a href="#procedures" class="font-medium hover:text-blue-600 transition-colors py-2">Procedures</a>
+                <a href="#case-studies" class="font-medium hover:text-blue-600 transition-colors py-2">Case Studies</a>
+                <a href="#contact" class="font-medium hover:text-blue-600 transition-colors py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:py-32 surgical-bg cardiac-pattern">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0" data-aos="fade-right">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 font-medium mb-6">
+                        <i class="fas fa-stethoscope mr-2"></i> Doctor
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                        Excellence in <span class="text-blue-600">Medical</span> Care
+                    </h1>
+
+                    <p class="text-xl text-gray-600 mb-8 max-w-2xl">
+                        With specialized experience, I provide comprehensive medical care using the most advanced techniques to improve patient outcomes and quality of life.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#contact" class="px-8 py-3 bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full font-semibold text-center hover:shadow-xl transition-shadow">
+                            Schedule Consultation
+                        </a>
+                        <a href="#procedures" class="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-full font-semibold text-center hover:bg-blue-50 transition-colors">
+                            View Procedures
+                        </a>
+                    </div>
+                    
+                    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-600 stat-number" data-count="1500">0</div>
+                            <div class="text-sm text-gray-600">Surgeries Performed</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-red-600 stat-number" data-count="98">0</div>
+                            <div class="text-sm text-gray-600">Success Rate %</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-emerald-600 stat-number" data-count="15">0</div>
+                            <div class="text-sm text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600 stat-number" data-count="42">0</div>
+                            <div class="text-sm text-gray-600">Research Papers</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 flex justify-center" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl surgical-mask float-animation">
+                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Dr. Bostone Emmanuel Neema" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <!-- Surgical badges around image -->
+                        <div class="absolute -top-4 -left-4 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center text-white shadow-xl surgical-glow">
+                            <i class="fas fa-award text-2xl"></i>
+                        </div>
+                        
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500 flex items-center justify-center text-white shadow-xl float-animation" style="animation-delay: 1s;">
+                            <div class="text-center">
+                                <div class="text-xl font-bold">99%</div>
+                                <div class="text-xs">Patient Satisfaction</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Surgical tools floating around -->
+                        <div class="absolute top-10 -right-10 w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg tool-icon">
+                            <i class="fas fa-syringe text-2xl text-blue-600"></i>
+                        </div>
+                        
+                        <div class="absolute bottom-20 -left-10 w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg tool-icon">
+                            <i class="fas fa-heart text-2xl text-red-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="text-blue-600">Dr. Bostone Emmanuel Neema</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A dedicated doctor committed to providing excellent medical care through innovative techniques and compassionate patient relationships.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Biography -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6">Professional Biography</h3>
+                    <p class="text-gray-600 mb-6">
+                        Dr. Bostone Emmanuel Neema is a dedicated doctor with extensive experience in providing comprehensive medical care. He practices at Apollo Speciality Hospital in Chennai India and Eldoret Dr's Plaza.
+                    </p>
+
+                    <p class="text-gray-600 mb-6">
+                        Dr. Neema is committed to delivering high-quality healthcare services, focusing on patient-centered care and innovative medical approaches to improve health outcomes.
+                    </p>
+
+                    <p class="text-gray-600 mb-8">
+                        Beyond clinical practice, Dr. Neema is dedicated to advancing medical knowledge and mentoring future healthcare professionals.
+                    </p>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#" class="px-6 py-2 border-2 border-blue-600 text-blue-600 rounded-full font-medium hover:bg-blue-50 transition-colors">
+                            <i class="fas fa-file-pdf mr-2"></i> Download CV
+                        </a>
+                        <a href="#" class="px-6 py-2 border-2 border-red-600 text-red-600 rounded-full font-medium hover:bg-red-50 transition-colors">
+                            <i class="fas fa-graduation-cap mr-2"></i> Academic Profile
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Credentials & Experience -->
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-6">Credentials & Experience</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Education -->
+                        <div class="surgical-border rounded-xl p-6 bg-gray-50">
+                            <h4 class="font-bold text-lg mb-4 flex items-center">
+                                <i class="fas fa-university text-blue-600 mr-3"></i> Education & Training
+                            </h4>
+                            <div class="space-y-4">
+                                <div class="timeline-item">
+                                    <h5 class="font-bold">Cardiovascular Surgery Fellowship</h5>
+                                    <p class="text-gray-600">Cleveland Clinic • 2008-2010</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h5 class="font-bold">General Surgery Residency</h5>
+                                    <p class="text-gray-600">Johns Hopkins Hospital • 2003-2008</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h5 class="font-bold">Medical Doctor (M.D.)</h5>
+                                    <p class="text-gray-600">Harvard Medical School • 1999-2003</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Certifications -->
+                        <div class="surgical-border rounded-xl p-6 bg-gray-50">
+                            <h4 class="font-bold text-lg mb-4 flex items-center">
+                                <i class="fas fa-certificate text-red-600 mr-3"></i> Board Certifications
+                            </h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm">American Board of Thoracic Surgery</span>
+                                <span class="px-4 py-2 bg-red-100 text-red-800 rounded-full text-sm">American Board of Surgery</span>
+                                <span class="px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm">National Board of Medical Examiners</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Affiliations -->
+                        <div class="surgical-border rounded-xl p-6 bg-gray-50">
+                            <h4 class="font-bold text-lg mb-4 flex items-center">
+                                <i class="fas fa-handshake text-emerald-600 mr-3"></i> Professional Affiliations
+                            </h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                                    <span class="text-sm">American College of Surgeons</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                                    <span class="text-sm">Society of Thoracic Surgeons</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                                    <span class="text-sm">American Heart Association</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                                    <span class="text-sm">European Association for Cardio-Thoracic Surgery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Surgical Expertise -->
+    <section id="expertise" class="py-20 surgical-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Surgical <span class="text-blue-600">Expertise</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Specializing in complex cardiovascular procedures with a focus on minimally invasive techniques and patient-centered care.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Expertise 1 -->
+                <div class="procedure-step bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center text-white mb-6 heartbeat">
+                        <i class="fas fa-heartbeat text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Coronary Artery Bypass Grafting (CABG)</h3>
+                    <p class="text-gray-600 mb-6">
+                        Advanced techniques in bypass surgery including off-pump and minimally invasive approaches that reduce recovery time and improve outcomes.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Off-pump CABG</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs">Minimally Invasive</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs">Robotic-Assisted</span>
+                    </div>
+                </div>
+                
+                <!-- Expertise 2 -->
+                <div class="procedure-step bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white mb-6 float-animation">
+                        <i class="fas fa-exchange-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Heart Valve Repair & Replacement</h3>
+                    <p class="text-gray-600 mb-6">
+                        Specialized in mitral and aortic valve procedures using transcatheter techniques (TAVR) and traditional open-heart approaches.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Mitral Repair</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">TAVR</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs">Biological Valves</span>
+                    </div>
+                </div>
+                
+                <!-- Expertise 3 -->
+                <div class="procedure-step bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-red-500 to-emerald-500 flex items-center justify-center text-white mb-6 pulse-slow">
+                        <i class="fas fa-procedures text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Surgical Treatment of Heart Failure</h3>
+                    <p class="text-gray-600 mb-6">
+                        Expertise in ventricular assist devices (VADs), heart transplantation, and innovative surgical therapies for advanced heart failure.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs">LVAD Implantation</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs">Transplantation</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Heart Failure Surgery</span>
+                    </div>
+                </div>
+                
+                <!-- Expertise 4 -->
+                <div class="procedure-step bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-lungs text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Aortic Surgery</h3>
+                    <p class="text-gray-600 mb-6">
+                        Comprehensive management of aortic diseases including aneurysms, dissections, and complex aortic root reconstruction.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Aortic Aneurysm</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Root Reconstruction</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs">Emergency Repair</span>
+                    </div>
+                </div>
+                
+                <!-- Expertise 5 -->
+                <div class="procedure-step bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500 flex items-center justify-center text-white mb-6 float-animation" style="animation-delay: 1s;">
+                        <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Minimally Invasive & Robotic Surgery</h3>
+                    <p class="text-gray-600 mb-6">
+                        Pioneering use of robotic-assisted platforms for cardiac procedures, offering smaller incisions, less pain, and faster recovery.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs">Robotic CABG</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Minimally Invasive</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">3D Visualization</span>
+                    </div>
+                </div>
+                
+                <!-- Expertise 6 -->
+                <div class="procedure-step bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-red-500 to-blue-500 flex items-center justify-center text-white mb-6 pulse-slow" style="animation-delay: 1.5s;">
+                        <i class="fas fa-user-md text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Complex Reoperative Cardiac Surgery</h3>
+                    <p class="text-gray-600 mb-6">
+                        Specialized expertise in reoperations for patients who have had previous heart surgery, requiring advanced surgical planning.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs">Redo Surgery</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Complex Cases</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs">High-Risk Patients</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Procedures Visualization -->
+    <section id="procedures" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Surgical <span class="text-blue-600">Procedures</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Visual representation of common cardiovascular procedures with detailed explanations of surgical approaches and outcomes.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Procedure 1 -->
+                <div class="surgical-border rounded-2xl overflow-hidden shadow-xl" data-aos="fade-right">
+                    <div class="h-64 bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center relative overflow-hidden">
+                        <div class="text-white text-center z-10">
+                            <i class="fas fa-heartbeat text-6xl mb-4 heartbeat"></i>
+                            <h3 class="text-2xl font-bold">Minimally Invasive CABG</h3>
+                        </div>
+                        <div class="absolute inset-0 bg-black/20"></div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-xl font-bold mb-4">Procedure Overview</h4>
+                        <p class="text-gray-600 mb-6">
+                            Off-pump coronary artery bypass grafting performed through small incisions between ribs, avoiding sternotomy. This approach preserves chest stability and accelerates recovery.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center p-4 bg-blue-50 rounded-xl">
+                                <div class="text-2xl font-bold text-blue-600">3-4</div>
+                                <div class="text-sm text-gray-600">Hour Procedure</div>
+                            </div>
+                            <div class="text-center p-4 bg-red-50 rounded-xl">
+                                <div class="text-2xl font-bold text-red-600">4-5</div>
+                                <div class="text-sm text-gray-600">Day Hospital Stay</div>
+                            </div>
+                            <div class="text-center p-4 bg-emerald-50 rounded-xl">
+                                <div class="text-2xl font-bold text-emerald-600">2-3</div>
+                                <div class="text-sm text-gray-600">Week Recovery</div>
+                            </div>
+                            <div class="text-center p-4 bg-purple-50 rounded-xl">
+                                <div class="text-2xl font-bold text-purple-600">98%</div>
+                                <div class="text-sm text-gray-600">Success Rate</div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="text-blue-600 font-medium flex items-center">
+                            <i class="fas fa-play-circle mr-2"></i> Watch Procedure Animation
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Procedure 2 -->
+                <div class="surgical-border rounded-2xl overflow-hidden shadow-xl" data-aos="fade-left">
+                    <div class="h-64 bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center relative overflow-hidden">
+                        <div class="text-white text-center z-10">
+                            <i class="fas fa-exchange-alt text-6xl mb-4 float-animation"></i>
+                            <h3 class="text-2xl font-bold">Transcatheter Aortic Valve Replacement (TAVR)</h3>
+                        </div>
+                        <div class="absolute inset-0 bg-black/20"></div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-xl font-bold mb-4">Procedure Overview</h4>
+                        <p class="text-gray-600 mb-6">
+                            Minimally invasive valve replacement delivered via catheter through blood vessels. No open-heart surgery required, ideal for high-risk patients.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center p-4 bg-blue-50 rounded-xl">
+                                <div class="text-2xl font-bold text-blue-600">1-2</div>
+                                <div class="text-sm text-gray-600">Hour Procedure</div>
+                            </div>
+                            <div class="text-center p-4 bg-purple-50 rounded-xl">
+                                <div class="text-2xl font-bold text-purple-600">2-3</div>
+                                <div class="text-sm text-gray-600">Day Hospital Stay</div>
+                            </div>
+                            <div class="text-center p-4 bg-emerald-50 rounded-xl">
+                                <div class="text-2xl font-bold text-emerald-600">1-2</div>
+                                <div class="text-sm text-gray-600">Week Recovery</div>
+                            </div>
+                            <div class="text-center p-4 bg-red-50 rounded-xl">
+                                <div class="text-2xl font-bold text-red-600">96%</div>
+                                <div class="text-sm text-gray-600">Success Rate</div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="text-purple-600 font-medium flex items-center">
+                            <i class="fas fa-play-circle mr-2"></i> Watch Procedure Animation
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="#" class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full font-semibold hover:shadow-xl transition-shadow">
+                    <i class="fas fa-book-medical mr-2"></i> View All Surgical Procedures
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Case Studies -->
+    <section id="case-studies" class="py-20 surgical-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Surgical <span class="text-blue-600">Case Studies</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Detailed analysis of complex surgical cases showcasing innovative approaches and exceptional outcomes.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Case Study 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-red-500 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <div class="text-5xl mb-4">❤️</div>
+                            <h3 class="text-xl font-bold">Complex Redo CABG</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">High Complexity</span>
+                            <span class="text-sm text-gray-500">72-year-old male</span>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Triple Vessel Disease with Previous Surgery</h4>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Successful reoperative CABG using advanced adhesiolysis techniques and arterial grafting strategy in a patient with prior sternotomy.
+                        </p>
+                        <div class="flex justify-between text-sm">
+                            <div>
+                                <div class="font-bold">Procedure Time</div>
+                                <div class="text-gray-600">5.2 hours</div>
+                            </div>
+                            <div>
+                                <div class="font-bold">Hospital Stay</div>
+                                <div class="text-gray-600">7 days</div>
+                            </div>
+                            <div>
+                                <div class="font-bold">Outcome</div>
+                                <div class="text-emerald-600 font-bold">Excellent</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <div class="text-5xl mb-4">🫀</div>
+                            <h3 class="text-xl font-bold">Emergency Aortic Dissection</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">Emergency</span>
+                            <span class="text-sm text-gray-500">58-year-old female</span>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Type A Aortic Dissection Repair</h4>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Life-saving emergency surgery for acute Type A aortic dissection with cerebral perfusion strategy and valve-sparing aortic root replacement.
+                        </p>
+                        <div class="flex justify-between text-sm">
+                            <div>
+                                <div class="font-bold">Procedure Time</div>
+                                <div class="text-gray-600">6.8 hours</div>
+                            </div>
+                            <div>
+                                <div class="font-bold">Hospital Stay</div>
+                                <div class="text-gray-600">12 days</div>
+                            </div>
+                            <div>
+                                <div class="font-bold">Outcome</div>
+                                <div class="text-emerald-600 font-bold">Successful</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-gradient-to-r from-emerald-500 to-blue-500 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <div class="text-5xl mb-4">🤖</div>
+                            <h3 class="text-xl font-bold">Robotic Mitral Repair</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">Minimally Invasive</span>
+                            <span class="text-sm text-gray-500">45-year-old male</span>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Severe Mitral Regurgitation</h4>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Robotic-assisted mitral valve repair with neochordal implantation and annuloplasty ring, achieving excellent valve function with minimal incisions.
+                        </p>
+                        <div class="flex justify-between text-sm">
+                            <div>
+                                <div class="font-bold">Procedure Time</div>
+                                <div class="text-gray-600">3.5 hours</div>
+                            </div>
+                            <div>
+                                <div class="font-bold">Hospital Stay</div>
+                                <div class="text-gray-600">3 days</div>
+                            </div>
+                            <div>
+                                <div class="font-bold">Outcome</div>
+                                <div class="text-emerald-600 font-bold">Excellent</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="#" class="inline-flex items-center px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+                    <i class="fas fa-clipboard-list mr-2"></i> View All Case Studies
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact & Consultation -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact & <span class="text-blue-600">Consultation</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Schedule a consultation to discuss your cardiac condition and explore surgical treatment options tailored to your specific needs.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Consultation Form -->
+                <div class="surgical-border rounded-2xl p-8 consultation-form" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6">Request a Consultation</h3>
+                    <form id="consultation-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block mb-2 font-medium">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" required>
+                            </div>
+                            <div>
+                                <label class="block mb-2 font-medium">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block mb-2 font-medium">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block mb-2 font-medium">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block mb-2 font-medium">Medical Condition / Concern</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" required>
+                                <option value="">Select Condition</option>
+                                <option value="cad">Coronary Artery Disease</option>
+                                <option value="valve">Heart Valve Disease</option>
+                                <option value="aortic">Aortic Disease</option>
+                                <option value="heart-failure">Heart Failure</option>
+                                <option value="arrhythmia">Arrhythmia</option>
+                                <option value="other">Other Cardiac Condition</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block mb-2 font-medium">Preferred Consultation Type</label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="consult-type" value="in-person" class="mr-2" checked>
+                                    <span>In-Person</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="consult-type" value="telemedicine" class="mr-2">
+                                    <span>Telemedicine</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <label class="block mb-2 font-medium">Additional Information</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" placeholder="Please provide any relevant medical history or specific concerns..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-lg font-semibold hover:shadow-xl transition-shadow">
+                            Submit Consultation Request
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div data-aos="fade-left">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-hospital text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Primary Practice Locations</h4>
+                                    <p class="text-gray-600">Apollo Speciality Hospital</p>
+                                    <p class="text-gray-600">Chennai, India</p>
+                                    <p class="text-gray-600">Eldoret Dr's Plaza, Eldoret, Kenya</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-red-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Office Phone</h4>
+                                    <p class="text-gray-600">(555) 123-4567</p>
+                                    <p class="text-sm text-gray-500">Monday-Friday, 8:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope text-emerald-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <p class="text-gray-600">contact@drsterling.com</p>
+                                    <p class="text-sm text-gray-500">For non-urgent inquiries only</p>
+                                </div>
+                            </div>
+                            
+                            <div class="emergency-contact p-6 bg-red-50 border border-red-200 rounded-2xl">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-exclamation-triangle text-red-600 text-2xl mr-3"></i>
+                                    <h4 class="font-bold text-red-800">Emergency Contact</h4>
+                                </div>
+                                <p class="text-gray-700 mb-2">
+                                    For cardiac emergencies, please go directly to the nearest emergency room or call 911.
+                                </p>
+                                <p class="font-medium">
+                                    Hospital Emergency: <span class="text-red-600">(555) 987-6543</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="surgical-border rounded-2xl p-8">
+                        <h3 class="text-xl font-bold mb-6">Hospital Affiliations</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-plus-square text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Apollo Speciality Hospital</h4>
+                                    <p class="text-sm text-gray-600">Chennai, India</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-hospital text-red-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Eldoret Dr's Plaza</h4>
+                                    <p class="text-sm text-gray-600">Eldoret, Kenya</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-red-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-heartbeat text-xl"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-xl font-bold">Dr. Bostone Emmanuel <span class="text-blue-400">Neema</span></h1>
+                            <p class="text-xs text-gray-400">Doctor</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Doctor specializing in comprehensive medical care at Apollo Speciality Hospital in Chennai India and Eldoret Dr's Plaza.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Dr. Neema</a></li>
+                        <li><a href="#expertise" class="text-gray-400 hover:text-white transition-colors">Surgical Expertise</a></li>
+                        <li><a href="#procedures" class="text-gray-400 hover:text-white transition-colors">Procedures</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Procedures -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Procedures</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Coronary Artery Bypass</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Valve Repair & Replacement</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Aortic Surgery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Minimally Invasive Surgery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Heart Failure Surgery</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Footer -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Information</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400 text-sm">Apollo Speciality Hospital<br>Chennai, India<br>Eldoret Dr's Plaza, Eldoret, Kenya</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">contact@drsterling.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2023 Dr. Bostone Emmanuel Neema. All rights reserved.
+                    </p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-researchgate"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-google-scholar"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-newspaper"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center text-gray-500 text-xs">
+                <p>Disclaimer: This website is for informational purposes only. It does not provide medical advice, diagnosis, or treatment. Always seek the advice of your physician or qualified healthcare provider.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+        
+        // Consultation Form Submission
+        document.getElementById('consultation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const originalButton = this.querySelector('button[type="submit"]');
+            const originalText = originalButton.innerHTML;
+            
+            originalButton.innerHTML = '<i class="fas fa-check mr-2"></i> Request Sent Successfully!';
+            originalButton.classList.remove('from-blue-600', 'to-red-600');
+            originalButton.classList.add('bg-emerald-600');
+            
+            setTimeout(() => {
+                originalButton.innerHTML = originalText;
+                originalButton.classList.remove('bg-emerald-600');
+                originalButton.classList.add('from-blue-600', 'to-red-600');
+                this.reset();
+            }, 3000);
+        });
+        
+        // Animated Counter for Stats
+        function animateCounter(element, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 16); // 60fps
+            
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 16);
+        }
+        
+        // Initialize counters when in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statElements = document.querySelectorAll('.stat-number');
+                    
+                    statElements.forEach(stat => {
+                        const target = parseInt(stat.getAttribute('data-count'));
+                        animateCounter(stat, target, 2000);
+                    });
+                    
+                    // Stop observing after animation
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        // Observe the stats section
+        const statsSection = document.querySelector('#home');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Tool icon animation on hover
+        document.querySelectorAll('.tool-icon').forEach(icon => {
+            icon.addEventListener('mouseenter', function() {
+                this.style.transform = 'rotate(15deg) scale(1.2)';
+            });
+            
+            icon.addEventListener('mouseleave', function() {
+                this.style.transform = 'rotate(0) scale(1)';
+            });
+        });
+        
+        // Add animation to procedure steps on scroll
+        const procedureObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, { threshold: 0.2 });
+        
+        document.querySelectorAll('.procedure-step').forEach(step => {
+            procedureObserver.observe(step);
+        });
+    </script>
+</body>
+</html>
