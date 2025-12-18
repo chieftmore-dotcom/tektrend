@@ -894,7 +894,12 @@
             </div>
         </div>
     </footer>
-    
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-red-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:shadow-xl z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- JavaScript Libraries -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
@@ -1018,6 +1023,22 @@
         
         document.querySelectorAll('.procedure-step').forEach(step => {
             procedureObserver.observe(step);
+        });
+
+        // Back to Top Button Functionality
+        window.addEventListener('scroll', function() {
+            const button = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                button.classList.remove('opacity-0');
+                button.classList.add('opacity-100');
+            } else {
+                button.classList.remove('opacity-100');
+                button.classList.add('opacity-0');
+            }
+        });
+
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
         });
     </script>
 </body>
