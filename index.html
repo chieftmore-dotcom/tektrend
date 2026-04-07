@@ -3,343 +3,1062 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TekTrend | CEO-Led Websites and Digital Solutions</title>
-    <meta name="description" content="TekTrend builds websites, dashboards, AI tools, and M-Pesa STK Push experiences with strong design and direct CEO visibility.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script>
-        (function () {
-            const saved = localStorage.getItem('tektrend-theme');
-            document.documentElement.classList.toggle('dark', saved ? saved === 'dark' : true);
-        })();
-    </script>
+    
+    <!-- SEO Meta Tags -->
+    <title>Dr. Bostone Emmanuel Neema | Spine Surgeon</title>
+    <meta name="description" content="Dr. Bostone Emmanuel Neema, expert spine surgeon in Nairobi, Kenya. Specializes in spinal fusion, disc replacement, scoliosis correction & minimally invasive spine surgery. Book consultation at Neema Medical Centre.">
+    <meta name="keywords" content="spine surgeon, spine surgery, spinal fusion, disc replacement, scoliosis correction, minimally invasive spine surgery, Neema Medical Centre, Nairobi Kenya, MTRH, KNH, Dr. Bostone Emmanuel Neema, orthopedic surgeon">
+    <meta name="author" content="Dr. Bostone Emmanuel Neema">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="KE-110">
+    <meta name="geo.placename" content="Nairobi">
+    <meta name="geo.position" content="-1.2864;36.8172">
+    <meta name="ICBM" content="-1.2864, 36.8172">
+    <link rel="canonical" href="https://drbostoneneema.com">
+    <meta property="og:title" content="Dr. Bostone Emmanuel Neema | Spine Surgeon">
+    <meta property="og:description" content="Expert spine surgeon in Eldoret, Kenya. Specializing in spinal fusion, disc replacement, scoliosis correction. Book consultation at Neema Medical Centre.">
+    <meta property="og:image" content="images/1000881199.jpg">
+    <meta property="og:url" content="https://drbostoneneema.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dr. Bostone Emmanuel Neema | Spine Surgeon">
+    <meta name="twitter:description" content="Expert spine surgeon in Eldoret, Kenya. Specializing in spinal fusion, disc replacement, scoliosis correction.">
+    <meta name="twitter:image" content="images/1000881199.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='45' y='20' width='10' height='60' fill='%23007bff'/><rect x='20' y='45' width='60' height='10' fill='%23007bff'/></svg>">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Manrope', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
-                    animation: { driftRight: 'driftRight 30s linear infinite' },
-                    keyframes: { driftRight: { '0%': { transform: 'translateX(-50%)' }, '100%': { transform: 'translateX(0%)' } } }
-                }
-            }
-        };
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Dr. Bostone Emmanuel Neema - Spine Surgeon",
+      "description": "Expert spine surgeon specializing in spinal fusion, disc replacement, scoliosis correction, and minimally invasive spine surgery.",
+      "url": "https://drbostoneneema.com",
+      "telephone": "+254723022782",
+      "email": "contact@drsterling.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Neema Medical Centre",
+        "addressLocality": "Nairobi",
+        "addressRegion": "Kenya",
+        "postalCode": "30100"
+      },
+      "medicalSpecialty": "Orthopedic Surgery",
+      "availableService": [
+        {
+          "@type": "MedicalProcedure",
+          "name": "Spinal Fusion Surgery"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Disc Replacement Surgery"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Spinal Decompression Surgery"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Scoliosis Correction"
+        }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Dr. Bostone Emmanuel Neema",
+        "jobTitle": "Spine Surgeon",
+        "alumniOf": "Friends School Kamusinga"
+      },
+      "sameAs": [
+        "https://wa.me/0723022782"
+      ]
+    }
     </script>
+    
     <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Manrope', sans-serif; }
-        .gradient-text { background-image: linear-gradient(90deg, #2563eb, #7c3aed, #0ea5e9); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .glass-card { background: rgba(255,255,255,.74); border: 1px solid rgba(148,163,184,.24); box-shadow: 0 24px 60px rgba(15,23,42,.12); backdrop-filter: blur(16px); }
-        .dark .glass-card { background: rgba(15,23,42,.78); border-color: rgba(148,163,184,.14); box-shadow: 0 24px 60px rgba(2,6,23,.45); }
-        .code-editor { background: rgba(15,23,42,.95); border: 1px solid rgba(148,163,184,.18); border-radius: 1.5rem; overflow: hidden; }
-        .code-top { background: rgba(2,6,23,.85); border-bottom: 1px solid rgba(148,163,184,.12); }
-        .preview-card { min-width: 20rem; max-width: 20rem; overflow: hidden; border-radius: 1.5rem; border: 1px solid rgba(148,163,184,.22); background: rgba(255,255,255,.86); }
-        .dark .preview-card { background: rgba(15,23,42,.92); border-color: rgba(148,163,184,.14); }
-        .preview-top { background: rgba(226,232,240,.85); border-bottom: 1px solid rgba(148,163,184,.25); }
-        .dark .preview-top { background: rgba(2,6,23,.86); border-bottom-color: rgba(148,163,184,.12); }
-        .preview-frame { height: 15rem; overflow: hidden; padding: 1rem; background: linear-gradient(135deg, #dbeafe, #e0e7ff); }
-        .dark .preview-frame { background: linear-gradient(135deg, #0f172a, #1e293b); }
-        .preview-canvas { height: 100%; border-radius: 1rem; background: #ffffff; box-shadow: inset 0 0 0 1px rgba(148,163,184,.28); display: flex; flex-direction: column; gap: .8rem; padding: .9rem; color: #0f172a; }
-        .preview-strip { display: flex; align-items: center; gap: .45rem; }
-        .preview-dot { height: .55rem; width: .55rem; border-radius: 999px; }
-        .preview-bar { height: .65rem; border-radius: 999px; background: #e2e8f0; }
-        .preview-bar.short { width: 34%; }
-        .preview-bar.medium { width: 58%; }
-        .preview-bar.long { width: 100%; }
-        .preview-grid { display: grid; gap: .65rem; flex: 1; }
-        .preview-grid.two { grid-template-columns: 1.1fr .9fr; }
-        .preview-grid.three { grid-template-columns: repeat(3, 1fr); }
-        .preview-panel { border-radius: .9rem; background: #f8fafc; padding: .75rem; box-shadow: inset 0 0 0 1px rgba(148,163,184,.22); }
-        .preview-panel.blue { background: linear-gradient(180deg, #dbeafe, #eff6ff); }
-        .preview-panel.violet { background: linear-gradient(180deg, #ede9fe, #f5f3ff); }
-        .preview-panel.green { background: linear-gradient(180deg, #dcfce7, #f0fdf4); }
-        .marquee-track { display: flex; width: max-content; }
-        .marquee:hover .marquee-track { animation-play-state: paused; }
-        .footer-link { color: #cbd5e1; transition: color .2s ease; }
-        .footer-link:hover { color: #fff; }
+        /* Custom CSS for surgical portfolio */
+        :root {
+            --primary: #0ea5e9;  /* Sky blue - medical trust color */
+            --secondary: #ef4444; /* Red - heart/surgery color */
+            --accent: #10b981;   /* Emerald - healing color */
+            --dark: #0f172a;     /* Dark blue background */
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Surgical themed background patterns */
+        .surgical-bg {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.03) 0%, rgba(239, 68, 68, 0.03) 100%);
+        }
+        
+        .cardiac-pattern {
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(14, 165, 233, 0.1) 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, rgba(239, 68, 68, 0.1) 2px, transparent 2px);
+            background-size: 50px 50px;
+        }
+        
+        /* Animations */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes surgical-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(14, 165, 233, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(14, 165, 233, 0.5); }
+        }
+        
+        .heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        .pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+        
+        .float-animation {
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        .surgical-glow {
+            animation: surgical-glow 2s ease-in-out infinite;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            border-radius: 5px;
+        }
+        
+        /* Surgical elements */
+        .surgical-border {
+            position: relative;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+        
+        .surgical-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--primary));
+            border-radius: inherit;
+            z-index: -1;
+        }
+        
+        /* Procedure visualization */
+        .procedure-step {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .procedure-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(14, 165, 233, 0.2);
+        }
+        
+        .procedure-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 4px 4px 0 0;
+        }
+        
+        /* Surgical tool icon animations */
+        .tool-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .tool-icon:hover {
+            transform: rotate(15deg) scale(1.2);
+        }
+        
+        /* Stats counter */
+        .stat-number {
+            font-feature-settings: "tnum";
+            font-variant-numeric: tabular-nums;
+        }
+        
+        /* Emergency contact */
+        .emergency-contact {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .emergency-contact::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(239, 68, 68, 0.1), transparent);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        /* Navigation */
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Surgical mask effect for images */
+        .surgical-mask {
+            -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
+            mask-image: radial-gradient(circle, black 70%, transparent 100%);
+        }
+        
+        /* Animated timeline for experience */
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 22px;
+            width: 2px;
+            height: calc(100% + 20px);
+            background: linear-gradient(to bottom, var(--primary), transparent);
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-white">
-    <nav class="sticky top-0 z-40 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/85">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-            <a href="#home" class="flex items-center gap-3">
-                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white"><i class="fas fa-code"></i></div>
-                <div>
-                    <div class="font-display text-2xl font-bold">TekTrend</div>
-                    <div class="text-xs uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Innovations</div>
+<body class="bg-gray-50 text-gray-800">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-red-500 rounded-full flex items-center justify-center text-white heartbeat">
+                    <i class="fas fa-heartbeat text-xl"></i>
                 </div>
-            </a>
-            <div class="hidden items-center gap-8 md:flex">
-                <a href="#services" class="text-lg text-slate-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400">Services</a>
-                <a href="#work" class="text-lg text-slate-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400">Websites</a>
-                <a href="#ceo" class="text-lg text-slate-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400">CEO</a>
-                <a href="#contact" class="text-lg text-slate-700 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400">Contact</a>
+                <div>
+                    <h1 class="text-2xl font-bold">Dr. Bostone Emmanuel <span class="text-blue-600">Neema</span></h1>
+                    <p class="text-xs text-gray-600">Spine Surgeon</p>
+                </div>
             </div>
-            <div class="flex items-center gap-3">
-                <button id="theme-toggle" type="button" class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-100"><i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline-block"></i></button>
-                <button type="button" data-open-modal class="hidden rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700 md:inline-flex">Message From The CEO</button>
-                <button id="menu-toggle" type="button" class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-100 md:hidden"><i class="fas fa-bars"></i></button>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link font-medium">Home</a>
+                <a href="#about" class="nav-link font-medium">About</a>
+                <a href="#expertise" class="nav-link font-medium">Expertise</a>
+                <a href="#procedures" class="nav-link font-medium">Procedures</a>
+                <a href="#contact" class="nav-link font-medium">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden md:block px-6 py-2 bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full font-medium hover:opacity-90 transition-opacity">
+                    Book Consultation
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-6 py-5 dark:border-slate-800 dark:bg-slate-950 md:hidden">
-            <div class="flex flex-col gap-4">
-                <a href="#services" class="text-lg text-slate-700 dark:text-slate-300">Services</a>
-                <a href="#work" class="text-lg text-slate-700 dark:text-slate-300">Websites</a>
-                <a href="#ceo" class="text-lg text-slate-700 dark:text-slate-300">CEO</a>
-                <a href="#contact" class="text-lg text-slate-700 dark:text-slate-300">Contact</a>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg hidden">
+            <div class="flex flex-col items-center py-6 space-y-4">
+                <a href="#home" class="font-medium hover:text-blue-600 transition-colors py-2">Home</a>
+                <a href="#about" class="font-medium hover:text-blue-600 transition-colors py-2">About</a>
+                <a href="#expertise" class="font-medium hover:text-blue-600 transition-colors py-2">Expertise</a>
+                <a href="#procedures" class="font-medium hover:text-blue-600 transition-colors py-2">Procedures</a>
+                <a href="#contact" class="font-medium hover:text-blue-600 transition-colors py-2">Contact</a>
+                <a href="#contact" class="font-medium hover:text-blue-600 transition-colors py-2">Book Consultation</a>
             </div>
         </div>
     </nav>
-    <main id="home">
-        <section class="relative overflow-hidden py-24 md:py-32">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.2),_transparent_40%),radial-gradient(circle_at_bottom_right,_rgba(124,58,237,0.18),_transparent_36%)]"></div>
-            <div class="relative mx-auto flex max-w-7xl flex-col gap-12 px-6 md:flex-row md:items-center">
-                <div class="w-full md:w-1/2">
-                    <span class="inline-flex rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-semibold uppercase tracking-[0.22em] text-blue-700 dark:border-blue-500/20 dark:bg-slate-900 dark:text-blue-300">CEO-led digital studio</span>
-                    <h1 class="mt-6 font-display text-5xl font-bold leading-tight md:text-7xl">TekTrend builds <span class="gradient-text">websites</span> that look serious and feel modern.</h1>
-                    <p class="mt-6 max-w-2xl text-xl text-slate-600 dark:text-slate-300">We design polished websites, payment experiences, and business platforms that help brands stand out, build trust, and convert more clients.</p>
-                    <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-                        <a href="#work" class="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-7 py-4 text-lg font-semibold text-white hover:bg-blue-700">View Websites</a>
-                        <button type="button" data-open-modal class="inline-flex items-center justify-center rounded-2xl border border-slate-300 px-7 py-4 text-lg font-semibold text-slate-800 hover:border-blue-500 hover:text-blue-600 dark:border-slate-700 dark:text-slate-100 dark:hover:border-blue-400 dark:hover:text-blue-300">Read The CEO Message</button>
+    
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:py-32 surgical-bg cardiac-pattern">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0" data-aos="fade-right">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 font-medium mb-6">
+                        <i class="fas fa-stethoscope mr-2"></i> Spine Surgeon
                     </div>
-                    <div class="mt-8 flex flex-wrap gap-3 text-sm font-semibold">
-                        <span class="rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-blue-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">Custom websites</span>
-                        <span class="rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-blue-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">M-Pesa STK Push</span>
-                        <span class="rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-blue-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">Dashboards</span>
-                        <span class="rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-blue-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">AI tools</span>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                        Excellence in <span class="text-blue-600">Spine</span> Surgery
+                    </h1>
+
+                    <p class="text-xl text-gray-600 mb-8 max-w-2xl">
+                        With specialized experience in spine surgery, I provide comprehensive spine care using the most advanced techniques to improve patient outcomes and quality of life.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#contact" class="px-8 py-3 bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full font-semibold text-center hover:shadow-xl transition-shadow">
+                            Schedule Consultation
+                        </a>
+                        <a href="#procedures" class="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-full font-semibold text-center hover:bg-blue-50 transition-colors">
+                            View Procedures
+                        </a>
+                    </div>
+                    
+                    <div class="mt-12 grid grid-cols-1 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-red-600 stat-number" data-count="98">0</div>
+                            <div class="text-sm text-gray-600">Success Rate %</div>
+                        </div>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2">
-                    <div class="glass-card overflow-hidden rounded-[2rem] p-4">
-                        <img src="images/tim.jpg" alt="CEO of TekTrend" class="h-[26rem] w-full rounded-[1.5rem] object-cover object-top md:h-[36rem]">
-                        <div class="px-2 pb-2 pt-5">
-                            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-blue-300">CEO of TekTrend</p>
-                            <h2 class="mt-2 font-display text-2xl font-bold">Leading with clarity, quality, and practical results</h2>
-                            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">TekTrend delivers websites, dashboards, AI tools, and payment experiences shaped around real business goals.</p>
+                
+                <div class="lg:w-1/2 flex justify-center" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl float-animation">
+                            <img src="images/1000881199.jpg" alt="Dr. Bostone Emmanuel Neema" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <!-- Surgical badges around image -->
+                        <div class="absolute -top-4 -left-4 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center text-white shadow-xl surgical-glow">
+                            <i class="fas fa-award text-2xl"></i>
+                        </div>
+
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500 flex items-center justify-center text-white shadow-xl float-animation" style="animation-delay: 1s;">
+                            <div class="text-center">
+                                <div class="text-xl font-bold">99%</div>
+                                <div class="text-xs">Patient Satisfaction</div>
+                            </div>
+                        </div>
+
+                        <!-- Surgical tools floating around -->
+                        <div class="absolute top-10 -right-10 w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg tool-icon">
+                            <i class="fas fa-syringe text-2xl text-blue-600"></i>
+                        </div>
+
+                        <div class="absolute bottom-20 -left-10 w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg tool-icon">
+                            <i class="fas fa-heart text-2xl text-red-600"></i>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="services" class="py-24">
-            <div class="mx-auto max-w-7xl px-6">
-                <div class="mx-auto max-w-3xl text-center">
-                    <span class="text-sm font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-blue-300">Services</span>
-                    <h2 class="mt-4 font-display text-4xl font-bold md:text-5xl">Solutions built for modern businesses</h2>
-                    <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">From high-impact websites to payments, automation, and dashboards, TekTrend delivers tools that help businesses move faster online.</p>
-                </div>
-                <div class="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-                    <article class="glass-card rounded-[1.75rem] p-8"><div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-600 text-2xl text-white"><i class="fas fa-window-maximize"></i></div><h3 class="mt-6 font-display text-2xl font-bold">Custom Websites</h3><p class="mt-4 text-slate-600 dark:text-slate-300">Modern marketing sites, landing pages, and business websites built to look polished on all screens.</p></article>
-                    <article class="glass-card rounded-[1.75rem] p-8"><div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-600 text-2xl text-white"><i class="fas fa-money-bill-wave"></i></div><h3 class="mt-6 font-display text-2xl font-bold">M-Pesa STK Push</h3><p class="mt-4 text-slate-600 dark:text-slate-300">Payment flows, order confirmations, and billing journeys that connect your service directly to M-Pesa checkout.</p></article>
-                    <article class="glass-card rounded-[1.75rem] p-8"><div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-violet-600 text-2xl text-white"><i class="fas fa-robot"></i></div><h3 class="mt-6 font-display text-2xl font-bold">AI Assistants</h3><p class="mt-4 text-slate-600 dark:text-slate-300">Helpful chat interfaces and smart support flows that improve communication with your clients.</p></article>
-                    <article class="glass-card rounded-[1.75rem] p-8"><div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-600 text-2xl text-white"><i class="fas fa-chart-line"></i></div><h3 class="mt-6 font-display text-2xl font-bold">Dashboards & Portals</h3><p class="mt-4 text-slate-600 dark:text-slate-300">Client workspaces, admin views, and internal systems that keep your business organized and visible.</p></article>
-                </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="text-blue-600">Dr. Bostone Emmanuel Neema</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A dedicated spine surgeon committed to providing excellent spine care through innovative surgical techniques and compassionate patient relationships.
+                </p>
             </div>
-        </section>
-        <section id="work" class="bg-white py-24 dark:bg-slate-950">
-            <div class="mx-auto max-w-7xl px-6">
-                <span class="text-sm font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-blue-300">Websites we have made</span>
-                <h2 class="mt-4 max-w-4xl font-display text-4xl font-bold md:text-5xl">Browser-style previews moving from left to right</h2>
-                <p class="mt-4 max-w-3xl text-lg text-slate-600 dark:text-slate-300">Explore a moving gallery of product experiences that reflect the kind of interfaces, portals, and digital workflows TekTrend can deliver.</p>
-                <div class="marquee mt-12 overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-100/70 p-4 dark:border-slate-800 dark:bg-slate-900/60">
-                    <div id="preview-track" class="marquee-track animate-driftRight gap-5">
-                        <article class="preview-card">
-                            <div class="preview-top flex items-center gap-2 px-4 py-3"><span class="h-3 w-3 rounded-full bg-red-400"></span><span class="h-3 w-3 rounded-full bg-yellow-400"></span><span class="h-3 w-3 rounded-full bg-green-400"></span><span class="ml-3 text-sm text-slate-500 dark:text-slate-400">Project Showcase</span></div>
-                            <div class="preview-frame">
-                                <div class="preview-canvas">
-                                    <div class="preview-strip"><span class="preview-dot bg-blue-500"></span><div class="preview-bar medium"></div></div>
-                                    <div class="preview-panel blue"><div class="preview-bar short"></div><div class="mt-3 preview-bar long"></div><div class="mt-2 preview-bar medium"></div></div>
-                                    <div class="preview-grid three"><div class="preview-panel"><div class="preview-bar short"></div><div class="mt-3 preview-bar medium"></div></div><div class="preview-panel"><div class="preview-bar short"></div><div class="mt-3 preview-bar medium"></div></div><div class="preview-panel"><div class="preview-bar short"></div><div class="mt-3 preview-bar medium"></div></div></div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Biography -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6">Professional Biography</h3>
+                    <p class="text-gray-600 mb-6">
+                        Dr. Bostone Emmanuel Neema is a dedicated spine surgeon with extensive experience in spine surgery. He practices at Neema Medical Centre in Nairobi, Kenya, and provides locum services at Moi Teaching and Referral Hospital (MTRH) and Kenyatta National Hospital (KNH).
+                    </p>
+
+                    <p class="text-gray-600 mb-6">
+                        Dr. Neema studied medicine in India and began his surgical career there. He is committed to delivering high-quality spine care services, focusing on patient-centered care and innovative surgical approaches to improve health outcomes.
+                    </p>
+
+                    <p class="text-gray-600 mb-8">
+                        Beyond clinical practice, Dr. Neema is dedicated to advancing medical knowledge and mentoring future healthcare professionals. He is an alumnus of Friends School Kamusinga.
+                    </p>
+                    
+                </div>
+                
+                <!-- Credentials & Experience -->
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-6">Credentials & Experience</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Education -->
+                        <div class="surgical-border rounded-xl p-6 bg-gray-50">
+                            <h4 class="font-bold text-lg mb-4 flex items-center">
+                                <i class="fas fa-university text-blue-600 mr-3"></i> Education & Training
+                            </h4>
+                            <div class="space-y-4">
+                                <div class="timeline-item">
+                                    <h5 class="font-bold">Spine Surgery Fellowship</h5>
+                                    
+                                </div>
+                                <div class="timeline-item">
+                                    <h5 class="font-bold">Orthopedic Surgery Residency</h5>
+                                    
+                                </div>
+                                <div class="timeline-item">
+                                    <h5 class="font-bold">Bachelor of Medicine, Bachelor of Surgery (MBBS)</h5>
+                                    
                                 </div>
                             </div>
-                            <div class="p-5"><h3 class="font-display text-xl font-bold">Project Showcase</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Portfolio browsing, featured builds, and clear project presentation.</p></div>
-                        </article>
-                        <article class="preview-card">
-                            <div class="preview-top flex items-center gap-2 px-4 py-3"><span class="h-3 w-3 rounded-full bg-red-400"></span><span class="h-3 w-3 rounded-full bg-yellow-400"></span><span class="h-3 w-3 rounded-full bg-green-400"></span><span class="ml-3 text-sm text-slate-500 dark:text-slate-400">Services Experience</span></div>
-                            <div class="preview-frame">
-                                <div class="preview-canvas">
-                                    <div class="preview-strip"><span class="preview-dot bg-violet-500"></span><div class="preview-bar short"></div></div>
-                                    <div class="preview-grid two"><div class="preview-panel violet"><div class="preview-bar medium"></div><div class="mt-3 preview-bar long"></div><div class="mt-2 preview-bar short"></div></div><div class="preview-panel"><div class="preview-bar short"></div><div class="mt-3 preview-bar medium"></div><div class="mt-2 preview-bar medium"></div></div></div>
-                                    <div class="preview-grid three"><div class="preview-panel"><div class="preview-bar medium"></div></div><div class="preview-panel"><div class="preview-bar medium"></div></div><div class="preview-panel"><div class="preview-bar medium"></div></div></div>
+                        </div>
+                        
+                        <!-- Certifications -->
+                        <div class="surgical-border rounded-xl p-6 bg-gray-50">
+                            <h4 class="font-bold text-lg mb-4 flex items-center">
+                                <i class="fas fa-certificate text-red-600 mr-3"></i> Board Certifications
+                            </h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm">Fellowship of the Royal College of Surgeons (FRCS)</span>
+                                <span class="px-4 py-2 bg-red-100 text-red-800 rounded-full text-sm">Diploma in Orthopedic Surgery</span>
+                                <span class="px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm">Kenya Medical Practitioners and Dentists Council</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Affiliations -->
+                        <div class="surgical-border rounded-xl p-6 bg-gray-50">
+                            <h4 class="font-bold text-lg mb-4 flex items-center">
+                                <i class="fas fa-handshake text-emerald-600 mr-3"></i> Professional Affiliations
+                            </h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                                    <span class="text-sm">Kenya Orthopaedic Association</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                                    <span class="text-sm">North Rift Medical Association</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                                    <span class="text-sm">International Society for the Advancement of Spine Surgery</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                                    <span class="text-sm">Friends School Kamusinga Alumni Association</span>
                                 </div>
                             </div>
-                            <div class="p-5"><h3 class="font-display text-xl font-bold">Services Page</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Offer breakdowns, plan highlights, and conversion-focused layout blocks.</p></div>
-                        </article>
-                        <article class="preview-card">
-                            <div class="preview-top flex items-center gap-2 px-4 py-3"><span class="h-3 w-3 rounded-full bg-red-400"></span><span class="h-3 w-3 rounded-full bg-yellow-400"></span><span class="h-3 w-3 rounded-full bg-green-400"></span><span class="ml-3 text-sm text-slate-500 dark:text-slate-400">Client Dashboard</span></div>
-                            <div class="preview-frame">
-                                <div class="preview-canvas">
-                                    <div class="preview-strip"><span class="preview-dot bg-emerald-500"></span><div class="preview-bar medium"></div></div>
-                                    <div class="preview-grid two"><div class="preview-panel green"><div class="preview-bar short"></div><div class="mt-3 preview-bar long"></div><div class="mt-2 preview-bar medium"></div></div><div class="preview-grid"><div class="preview-panel"><div class="preview-bar short"></div><div class="mt-3 preview-bar medium"></div></div><div class="preview-panel"><div class="preview-bar short"></div><div class="mt-3 preview-bar medium"></div></div></div></div>
-                                </div>
-                            </div>
-                            <div class="p-5"><h3 class="font-display text-xl font-bold">User Dashboard</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Clean workspace views for projects, activity, and client account management.</p></div>
-                        </article>
-                        <article class="preview-card">
-                            <div class="preview-top flex items-center gap-2 px-4 py-3"><span class="h-3 w-3 rounded-full bg-red-400"></span><span class="h-3 w-3 rounded-full bg-yellow-400"></span><span class="h-3 w-3 rounded-full bg-green-400"></span><span class="ml-3 text-sm text-slate-500 dark:text-slate-400">Messaging Center</span></div>
-                            <div class="preview-frame">
-                                <div class="preview-canvas">
-                                    <div class="preview-strip"><span class="preview-dot bg-sky-500"></span><div class="preview-bar short"></div></div>
-                                    <div class="preview-grid two"><div class="preview-panel"><div class="preview-bar medium"></div><div class="mt-3 preview-bar short"></div><div class="mt-3 preview-bar medium"></div></div><div class="preview-panel blue"><div class="preview-bar long"></div><div class="mt-3 preview-bar medium"></div><div class="mt-3 preview-bar short"></div></div></div>
-                                    <div class="preview-panel"><div class="preview-bar long"></div></div>
-                                </div>
-                            </div>
-                            <div class="p-5"><h3 class="font-display text-xl font-bold">Messaging Center</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Conversation layouts for support, feedback, and client communication.</p></div>
-                        </article>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="ceo" class="py-24">
-            <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[0.95fr,1.05fr] lg:items-center">
-                <div class="glass-card rounded-[2rem] p-6"><img src="images/tim.jpg" alt="TekTrend CEO portrait" class="h-[28rem] w-full rounded-[1.5rem] object-cover object-center"></div>
+        </div>
+    </section>
+    
+    <!-- Surgical Expertise -->
+    <section id="expertise" class="py-20 surgical-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Surgical <span class="text-blue-600">Expertise</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Specializing in complex spine surgery procedures with a focus on minimally invasive techniques and patient-centered care.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Expertise 1 -->
+                <div class="procedure-step bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center text-white mb-6 heartbeat">
+                        <i class="fas fa-heartbeat text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Spinal Fusion Surgery</h3>
+                    <p class="text-gray-600 mb-6">
+                        Advanced techniques in spinal fusion including minimally invasive approaches, lumbar and cervical fusions that reduce recovery time and improve outcomes.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Minimally Invasive</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs">Lumbar Fusion</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs">Cervical Fusion</span>
+                    </div>
+                </div>
+                
+                <!-- Expertise 2 -->
+                <div class="procedure-step bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white mb-6 float-animation">
+                        <i class="fas fa-exchange-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Disc Replacement Surgery</h3>
+                    <p class="text-gray-600 mb-6">
+                        Specialized in cervical and lumbar disc replacement procedures using advanced prosthetic discs for motion preservation.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Cervical Disc Replacement</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Lumbar Disc Replacement</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs">Motion Preservation</span>
+                    </div>
+                </div>
+                
+                <!-- Expertise 3 -->
+                <div class="procedure-step bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-red-500 to-emerald-500 flex items-center justify-center text-white mb-6 pulse-slow">
+                        <i class="fas fa-procedures text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Spinal Decompression Surgery</h3>
+                    <p class="text-gray-600 mb-6">
+                        Expertise in laminectomy, laminotomy, and foraminotomy procedures to relieve spinal cord and nerve pressure.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs">Laminectomy</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs">Microdiscectomy</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Spinal Stenosis</span>
+                    </div>
+                </div>
+                
+                <!-- Expertise 4 -->
+                <div class="procedure-step bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-lungs text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Scoliosis Correction</h3>
+                    <p class="text-gray-600 mb-6">
+                        Comprehensive management of spinal deformities including scoliosis correction, kyphosis treatment, and complex spinal reconstruction.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Scoliosis Surgery</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Kyphosis Correction</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs">Spinal Deformity</span>
+                    </div>
+                </div>
+                
+                <!-- Expertise 5 -->
+                <div class="procedure-step bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500 flex items-center justify-center text-white mb-6 float-animation" style="animation-delay: 1s;">
+                        <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Minimally Invasive Spine Surgery</h3>
+                    <p class="text-gray-600 mb-6">
+                        Pioneering use of minimally invasive techniques for spine procedures, offering smaller incisions, less pain, and faster recovery.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs">Endoscopic Surgery</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Tubular Retractors</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Percutaneous Techniques</span>
+                    </div>
+                </div>
+                
+                <!-- Expertise 6 -->
+                <div class="procedure-step bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-red-500 to-blue-500 flex items-center justify-center text-white mb-6 pulse-slow" style="animation-delay: 1.5s;">
+                        <i class="fas fa-user-md text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Complex Spinal Revision Surgery</h3>
+                    <p class="text-gray-600 mb-6">
+                        Specialized expertise in revision surgeries for patients who have had previous spine surgery, requiring advanced surgical planning.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs">Revision Surgery</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Failed Back Surgery</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs">Complex Cases</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Procedures Visualization -->
+    <section id="procedures" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Surgical <span class="text-blue-600">Procedures</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Visual representation of common spine surgery procedures with detailed explanations of surgical approaches and outcomes.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Procedure 1 -->
+                <div class="surgical-border rounded-2xl overflow-hidden shadow-xl" data-aos="fade-right">
+                    <div class="h-64 bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center relative overflow-hidden">
+                        <div class="text-white text-center z-10">
+                            <i class="fas fa-heartbeat text-6xl mb-4 heartbeat"></i>
+                            <h3 class="text-2xl font-bold">Minimally Invasive Spinal Fusion</h3>
+                        </div>
+                        <div class="absolute inset-0 bg-black/20"></div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-xl font-bold mb-4">Procedure Overview</h4>
+                        <p class="text-gray-600 mb-6">
+                            Minimally invasive spinal fusion performed through small incisions using tubular retractors, avoiding large muscle dissection. This approach preserves spinal stability and accelerates recovery.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center p-4 bg-blue-50 rounded-xl">
+                                <div class="text-2xl font-bold text-blue-600">3-4</div>
+                                <div class="text-sm text-gray-600">Hour Procedure</div>
+                            </div>
+                            <div class="text-center p-4 bg-red-50 rounded-xl">
+                                <div class="text-2xl font-bold text-red-600">4-5</div>
+                                <div class="text-sm text-gray-600">Day Hospital Stay</div>
+                            </div>
+                            <div class="text-center p-4 bg-emerald-50 rounded-xl">
+                                <div class="text-2xl font-bold text-emerald-600">2-3</div>
+                                <div class="text-sm text-gray-600">Week Recovery</div>
+                            </div>
+                            <div class="text-center p-4 bg-purple-50 rounded-xl">
+                                <div class="text-2xl font-bold text-purple-600">98%</div>
+                                <div class="text-sm text-gray-600">Success Rate</div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="text-blue-600 font-medium flex items-center">
+                            <i class="fas fa-play-circle mr-2"></i> Watch Procedure Animation
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Procedure 2 -->
+                <div class="surgical-border rounded-2xl overflow-hidden shadow-xl" data-aos="fade-left">
+                    <div class="h-64 bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center relative overflow-hidden">
+                        <div class="text-white text-center z-10">
+                            <i class="fas fa-exchange-alt text-6xl mb-4 float-animation"></i>
+                            <h3 class="text-2xl font-bold">Cervical Disc Replacement</h3>
+                        </div>
+                        <div class="absolute inset-0 bg-black/20"></div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-xl font-bold mb-4">Procedure Overview</h4>
+                        <p class="text-gray-600 mb-6">
+                            Minimally invasive disc replacement surgery preserving motion at the operated level. Advanced prosthetic discs maintain cervical spine mobility.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center p-4 bg-blue-50 rounded-xl">
+                                <div class="text-2xl font-bold text-blue-600">1-2</div>
+                                <div class="text-sm text-gray-600">Hour Procedure</div>
+                            </div>
+                            <div class="text-center p-4 bg-purple-50 rounded-xl">
+                                <div class="text-2xl font-bold text-purple-600">2-3</div>
+                                <div class="text-sm text-gray-600">Day Hospital Stay</div>
+                            </div>
+                            <div class="text-center p-4 bg-emerald-50 rounded-xl">
+                                <div class="text-2xl font-bold text-emerald-600">1-2</div>
+                                <div class="text-sm text-gray-600">Week Recovery</div>
+                            </div>
+                            <div class="text-center p-4 bg-red-50 rounded-xl">
+                                <div class="text-2xl font-bold text-red-600">96%</div>
+                                <div class="text-sm text-gray-600">Success Rate</div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="text-purple-600 font-medium flex items-center">
+                            <i class="fas fa-play-circle mr-2"></i> Watch Procedure Animation
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="#" class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full font-semibold hover:shadow-xl transition-shadow">
+                    <i class="fas fa-book-medical mr-2"></i> View All Surgical Procedures
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Contact & Consultation -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact & <span class="text-blue-600">Consultation</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Schedule a consultation to discuss your cardiac condition and explore surgical treatment options tailored to your specific needs.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-12">
+                <!-- Contact Information -->
+                <div data-aos="fade-up">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-hospital text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Primary Practice Locations</h4>
+                                    <p class="text-gray-600">Neema Medical Centre</p>
+                                    <p class="text-gray-600">Nairobi, Kenya</p>
+                                    <p class="text-gray-600">Locum services at MTRH and KNH</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-red-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Office Phone</h4>
+                                    <p class="text-gray-600">0723 022 782 / +91 80629 72770</p>
+                                    <p class="text-sm text-gray-500">Monday-Friday, 8:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope text-emerald-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <p class="text-gray-600"><a href="mailto:contact@drsterling.com" class="text-blue-600 hover:underline">bostoneneema@gmail.com</a></p>
+                                    <p class="text-sm text-gray-500">For non-urgent inquiries only</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-share-alt text-purple-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Social Media</h4>
+                                    <div class="flex space-x-4">
+                                        <a href="#" class="text-blue-600 hover:text-blue-800" title="Facebook"><i class="fab fa-facebook-f text-xl"></i></a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-800" title="X (Twitter)"><i class="fab fa-twitter text-xl"></i></a>
+                                        <a href="https://wa.me/0723022782" class="text-green-600 hover:text-green-800" title="WhatsApp"><i class="fab fa-whatsapp text-xl"></i></a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-800" title="LinkedIn"><i class="fab fa-linkedin-in text-xl"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="emergency-contact p-6 bg-red-50 border border-red-200 rounded-2xl">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-exclamation-triangle text-red-600 text-2xl mr-3"></i>
+                                    <h4 class="font-bold text-red-800">Emergency Contact</h4>
+                                </div>
+                                <p class="text-gray-700 mb-2">
+                                    For cardiac emergencies, please go directly to the nearest emergency room or call 911.
+                                </p>
+                                <p class="font-medium">
+                                    Hospital Emergency: <span class="text-red-600">(555) 987-6543</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="surgical-border rounded-2xl p-8">
+                        <h3 class="text-xl font-bold mb-6">Hospital Affiliations</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-plus-square text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Neema Medical Centre</h4>
+                                    <p class="text-sm text-gray-600">Nairobi, Kenya</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-hospital text-red-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Moi Teaching and Referral Hospital (MTRH)</h4>
+                                    <p class="text-sm text-gray-600">Eldoret, Kenya</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-hospital text-emerald-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Kenyatta National Hospital (KNH)</h4>
+                                    <p class="text-sm text-gray-600">Nairobi, Kenya</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
                 <div>
-                    <span class="text-sm font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-blue-300">From the CEO</span>
-                    <h2 class="mt-4 font-display text-4xl font-bold md:text-5xl">Leadership that stays close to every project</h2>
-                    <p class="mt-5 text-lg text-slate-600 dark:text-slate-300">TekTrend is led with a hands-on approach that values strong presentation, fast communication, and practical results for every client.</p>
-                    <div class="mt-8 grid gap-4 sm:grid-cols-2">
-                        <div class="glass-card rounded-[1.5rem] p-5"><p class="text-xs font-semibold uppercase tracking-[0.22em] text-blue-600 dark:text-blue-300">Email</p><a href="mailto:tektrendsoutions@gmail.com" class="mt-3 block text-lg font-semibold text-slate-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-300">tektrendsoutions@gmail.com</a></div>
-                        <div class="glass-card rounded-[1.5rem] p-5"><p class="text-xs font-semibold uppercase tracking-[0.22em] text-blue-600 dark:text-blue-300">Focus</p><p class="mt-3 text-lg text-slate-700 dark:text-slate-300">Websites, dashboards, AI tools, and M-Pesa payment experiences.</p></div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-red-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-heartbeat text-xl"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-xl font-bold">Dr. Bostone Emmanuel <span class="text-blue-400">Neema</span></h1>
+                            <p class="text-xs text-gray-400">Doctor</p>
+                        </div>
                     </div>
-                    <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-                        <button type="button" data-open-modal class="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-7 py-4 text-lg font-semibold text-white hover:bg-blue-700">Open CEO Modal</button>
-                        <a href="#contact" class="inline-flex items-center justify-center rounded-2xl border border-slate-300 px-7 py-4 text-lg font-semibold text-slate-800 hover:border-blue-500 hover:text-blue-600 dark:border-slate-700 dark:text-slate-100 dark:hover:border-blue-400 dark:hover:text-blue-300">Jump To Contact</a>
-                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Spine Surgeon specializing in spine surgery at Neema Medical Centre, Nairobi, Kenya, with locum services at MTRH and KNH.
+                    </p>
                 </div>
-            </div>
-        </section>
-        <section id="contact" class="relative overflow-hidden bg-white py-24 dark:bg-slate-950">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(59,130,246,0.16),_transparent_36%),radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.14),_transparent_32%)]"></div>
-            <div class="relative mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[0.9fr,1.1fr]">
+                
+                <!-- Quick Links -->
                 <div>
-                    <span class="text-sm font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-blue-300">Contacts</span>
-                    <h2 class="mt-4 font-display text-4xl font-bold md:text-5xl">Let’s talk about your next digital project</h2>
-                    <p class="mt-5 text-lg text-slate-600 dark:text-slate-300">Reach out for websites, dashboards, AI-powered tools, and M-Pesa payment experiences tailored to your business goals.</p>
-                    <div class="mt-8 space-y-4">
-                        <div class="glass-card rounded-[1.5rem] p-5"><p class="text-xs font-semibold uppercase tracking-[0.22em] text-blue-600 dark:text-blue-300">Primary Email</p><a href="mailto:tektrendsoutions@gmail.com" class="mt-2 block text-lg font-semibold text-slate-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-300">tektrendsoutions@gmail.com</a></div>
-                        <div class="glass-card rounded-[1.5rem] p-5"><p class="text-xs font-semibold uppercase tracking-[0.22em] text-blue-600 dark:text-blue-300">Quick links</p><div class="mt-4 flex flex-wrap gap-3"><a href="#work" class="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white dark:bg-slate-800">Website previews</a><button type="button" data-open-modal class="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white">CEO modal</button></div></div>
-                    </div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Dr. Neema</a></li>
+                        <li><a href="#expertise" class="text-gray-400 hover:text-white transition-colors">Surgical Expertise</a></li>
+                        <li><a href="#procedures" class="text-gray-400 hover:text-white transition-colors">Procedures</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="glass-card rounded-[2rem] p-8 md:p-10">
-                    <h3 class="font-display text-3xl font-bold">Send a project brief</h3>
-                    <p class="mt-3 text-slate-600 dark:text-slate-300">Share your idea, business need, or project scope and TekTrend will follow up with the next steps.</p>
-                    <form id="contact-form" class="mt-8 space-y-5">
-                        <div class="grid gap-5 md:grid-cols-2">
-                            <label class="block"><span class="mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-300">Full name</span><input id="name" type="text" required class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-blue-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"></label>
-                            <label class="block"><span class="mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-300">Email address</span><input id="email" type="email" required class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-blue-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"></label>
-                        </div>
-                        <label class="block"><span class="mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-300">Project type</span><select id="project-type" class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-blue-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"><option>Custom Website</option><option>M-Pesa STK Push</option><option>Dashboard or Portal</option><option>AI Assistant</option><option>Other</option></select></label>
-                        <label class="block"><span class="mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-300">Message</span><textarea id="message" rows="6" required class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-blue-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"></textarea></label>
-                        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                            <button type="submit" class="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-7 py-4 text-lg font-semibold text-white hover:bg-blue-700">Send Via Email</button>
-                            <p id="form-status" class="text-sm text-slate-500 dark:text-slate-400"></p>
-                        </div>
-                    </form>
+                
+                <!-- Procedures -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Procedures</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Spinal Fusion</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Disc Replacement</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Spinal Decompression</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Minimally Invasive Surgery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Scoliosis Correction</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Footer -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Information</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400 text-sm">Neema Medical Centre<br>Nairobi, Kenya<br>Locum at MTRH and KNH</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">0723 022 782</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">contact@drsterling.com</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer class="bg-slate-950 pb-8 pt-20 text-white">
-        <div class="mx-auto max-w-7xl px-6">
-            <div class="grid gap-12 md:grid-cols-2 xl:grid-cols-4">
-                <div><div class="flex items-center gap-3"><div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white"><i class="fas fa-code"></i></div><div><div class="font-display text-2xl font-bold">TekTrend</div><div class="text-xs uppercase tracking-[0.24em] text-slate-400">Innovations</div></div></div><p class="mt-5 text-lg text-slate-300">CEO-led builds for websites, dashboards, AI tools, and M-Pesa STK Push integrations.</p></div>
-                <div><h3 class="font-display text-xl font-bold">Services</h3><ul class="mt-5 space-y-3"><li><a href="#services" class="footer-link">Custom Websites</a></li><li><a href="#services" class="footer-link">M-Pesa STK Push</a></li><li><a href="#services" class="footer-link">Dashboards & Portals</a></li><li><a href="#services" class="footer-link">AI Assistants</a></li></ul></div>
-                <div><h3 class="font-display text-xl font-bold">Website Previews</h3><ul class="mt-5 space-y-3"><li><a href="projects.php" class="footer-link">Projects Page</a></li><li><a href="service.php" class="footer-link">Services Page</a></li><li><a href="user_dashboard.php" class="footer-link">User Dashboard</a></li><li><a href="users_messages.php" class="footer-link">Messaging Center</a></li></ul></div>
-                <div><h3 class="font-display text-xl font-bold">Contact</h3><ul class="mt-5 space-y-3 text-slate-300"><li><a href="mailto:tektrendsoutions@gmail.com" class="footer-link">tektrendsoutions@gmail.com</a></li><li><a href="#contact" class="footer-link">Open contact section</a></li><li><button type="button" data-open-modal class="footer-link text-left">Read the CEO message</button></li></ul></div>
+            
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2023 Dr. Bostone Emmanuel Neema. All rights reserved.
+                    </p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-researchgate"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-google-scholar"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-newspaper"></i>
+                    </a>
+                </div>
             </div>
-            <div class="mt-12 border-t border-slate-800 pt-6"><p class="text-sm text-slate-400"><span id="footer-year"></span> TekTrend. All rights reserved.</p></div>
+            
+            <div class="mt-8 text-center text-gray-500 text-xs">
+                <p>Disclaimer: This website is for informational purposes only. It does not provide medical advice, diagnosis, or treatment. Always seek the advice of your physician or qualified healthcare provider.</p>
+            </div>
         </div>
     </footer>
-    <div id="ceo-modal" class="fixed inset-0 z-50 hidden items-center justify-center px-6 py-6">
-        <div class="absolute inset-0 bg-slate-950/75 backdrop-blur-md"></div>
-        <div class="glass-card relative z-10 w-full max-w-5xl rounded-[2rem] p-6 md:p-8">
-            <div class="mb-6 flex items-center justify-between">
-                <div><p class="text-sm font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-blue-300">Message from the CEO</p><h2 class="mt-2 font-display text-3xl font-bold md:text-4xl">Welcome to TekTrend</h2></div>
-                <button id="close-modal" type="button" class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-100"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="grid gap-8 lg:grid-cols-[18rem,1fr]">
-                <div class="glass-card rounded-[1.75rem] p-4"><img src="images/tim.jpg" alt="CEO portrait inside modal" class="h-[20rem] w-full rounded-[1.25rem] object-cover"><div class="mt-4 rounded-[1.25rem] bg-blue-600 px-4 py-3 text-white"><p class="text-sm uppercase tracking-[0.22em]">TekTrend leadership</p><p class="mt-1 font-display text-xl font-bold">CEO, TekTrend</p></div></div>
-                <div>
-                    <p class="text-lg leading-8 text-slate-700 dark:text-slate-300">Thank you for visiting TekTrend. We believe every digital product should feel clear, confident, and ready for real business. Our work is centered on practical solutions that help brands grow, communicate better, and serve clients more effectively.</p>
-                    <p class="mt-5 text-lg leading-8 text-slate-700 dark:text-slate-300">We focus on websites that represent your brand well, dashboards that keep work organized, and payment journeys like M-Pesa STK Push that make it easier for clients to transact.</p>
-                    <div class="mt-8 grid gap-4 sm:grid-cols-2">
-                        <div class="glass-card rounded-[1.5rem] p-5"><p class="text-xs font-semibold uppercase tracking-[0.22em] text-blue-600 dark:text-blue-300">Email</p><a href="mailto:tektrendsoutions@gmail.com" class="mt-3 block text-lg font-semibold text-slate-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-300">tektrendsoutions@gmail.com</a></div>
-                        <div class="glass-card rounded-[1.5rem] p-5"><p class="text-xs font-semibold uppercase tracking-[0.22em] text-blue-600 dark:text-blue-300">What we build</p><p class="mt-3 text-lg text-slate-700 dark:text-slate-300">Websites, dashboards, AI tools, and M-Pesa payment experiences.</p></div>
-                        <a href="#work" class="glass-card rounded-[1.5rem] p-5"><p class="text-xs font-semibold uppercase tracking-[0.22em] text-blue-600 dark:text-blue-300">Portfolio</p><p class="mt-3 text-lg font-semibold text-slate-900 dark:text-white">See the website previews</p></a>
-                        <a href="#contact" class="glass-card rounded-[1.5rem] p-5"><p class="text-xs font-semibold uppercase tracking-[0.22em] text-blue-600 dark:text-blue-300">Contacts</p><p class="mt-3 text-lg font-semibold text-slate-900 dark:text-white">Jump to the contact section</p></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-red-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:shadow-xl z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const footerYear = document.getElementById('footer-year');
-        const previewTrack = document.getElementById('preview-track');
-        const modal = document.getElementById('ceo-modal');
-        const closeModal = document.getElementById('close-modal');
-        const openButtons = document.querySelectorAll('[data-open-modal]');
-        const form = document.getElementById('contact-form');
-        const formStatus = document.getElementById('form-status');
-
-        footerYear.textContent = new Date().getFullYear();
-        previewTrack.innerHTML += previewTrack.innerHTML;
-
-        themeToggle.addEventListener('click', function () {
-            const dark = document.documentElement.classList.toggle('dark');
-            localStorage.setItem('tektrend-theme', dark ? 'dark' : 'light');
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
         });
-
-        menuToggle.addEventListener('click', function () {
-            mobileMenu.classList.toggle('hidden');
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
         });
-
-        document.querySelectorAll('#mobile-menu a').forEach(function (link) {
-            link.addEventListener('click', function () {
-                mobileMenu.classList.add('hidden');
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
             });
         });
-
-        function openModal() {
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.classList.add('overflow-hidden');
+        
+        // Animated Counter for Stats
+        function animateCounter(element, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 16); // 60fps
+            
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 16);
         }
-
-        function hideModal() {
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            document.body.classList.remove('overflow-hidden');
+        
+        // Initialize counters when in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statElements = document.querySelectorAll('.stat-number');
+                    
+                    statElements.forEach(stat => {
+                        const target = parseInt(stat.getAttribute('data-count'));
+                        animateCounter(stat, target, 2000);
+                    });
+                    
+                    // Stop observing after animation
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        // Observe the stats section
+        const statsSection = document.querySelector('#home');
+        if (statsSection) {
+            observer.observe(statsSection);
         }
-
-        openButtons.forEach(function (button) { button.addEventListener('click', openModal); });
-        closeModal.addEventListener('click', hideModal);
-        modal.addEventListener('click', function (event) {
-            if (event.target === modal || event.target === modal.firstElementChild) hideModal();
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape' && modal.classList.contains('flex')) hideModal();
+        
+        // Tool icon animation on hover
+        document.querySelectorAll('.tool-icon').forEach(icon => {
+            icon.addEventListener('mouseenter', function() {
+                this.style.transform = 'rotate(15deg) scale(1.2)';
+            });
+            
+            icon.addEventListener('mouseleave', function() {
+                this.style.transform = 'rotate(0) scale(1)';
+            });
+        });
+        
+        // Add animation to procedure steps on scroll
+        const procedureObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, { threshold: 0.2 });
+        
+        document.querySelectorAll('.procedure-step').forEach(step => {
+            procedureObserver.observe(step);
         });
 
-        document.querySelectorAll('#ceo-modal a[href^="#"]').forEach(function (link) {
-            link.addEventListener('click', hideModal);
+        // Back to Top Button Functionality
+        window.addEventListener('scroll', function() {
+            const button = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                button.classList.remove('opacity-0');
+                button.classList.add('opacity-100');
+            } else {
+                button.classList.remove('opacity-100');
+                button.classList.add('opacity-0');
+            }
         });
 
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const type = document.getElementById('project-type').value.trim();
-            const message = document.getElementById('message').value.trim();
-            const subject = encodeURIComponent(type + ' inquiry from ' + name);
-            const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nProject Type: ' + type + '\n\n' + message);
-            formStatus.textContent = 'Opening your email app...';
-            window.location.href = 'mailto:tektrendsoutions@gmail.com?subject=' + subject + '&body=' + body;
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
         });
     </script>
 </body>
